@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xbel version="1.0"
+      xmlns:bookmark="http://www.freedesktop.org/standards/desktop-bookmarks"
+      xmlns:mime="http://www.freedesktop.org/standards/shared-mime-info"
+>
+  <bookmark href="file:///usr/share/rpd-wallpaper/trees.jpg" added="2019-11-02T08:05:09Z" modified="2019-11-02T08:05:09Z" visited="2019-11-02T08:05:10Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/jpeg"/>
+        <bookmark:applications>
+          <bookmark:application name="pipanel" exec="&apos;pipanel %u&apos;" modified="2019-11-02T08:05:09Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///usr/share/rpd-wallpaper/raspberry-pi-logo.png" added="2019-11-02T08:05:27Z" modified="2019-11-02T08:05:27Z" visited="2019-11-02T08:05:27Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:applications>
+          <bookmark:application name="pipanel" exec="&apos;pipanel %u&apos;" modified="2019-11-02T08:05:27Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///usr/share/rpd-wallpaper/islands.jpg" added="2019-11-02T08:05:33Z" modified="2019-11-02T08:05:33Z" visited="2019-11-02T08:05:33Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/jpeg"/>
+        <bookmark:applications>
+          <bookmark:application name="pipanel" exec="&apos;pipanel %u&apos;" modified="2019-11-02T08:05:33Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///usr/share/rpd-wallpaper/aurora.jpg" added="2019-11-02T08:05:38Z" modified="2019-11-02T08:05:38Z" visited="2019-11-02T08:05:39Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/jpeg"/>
+        <bookmark:applications>
+          <bookmark:application name="pipanel" exec="&apos;pipanel %u&apos;" modified="2019-11-02T08:05:38Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///usr/share/rpd-wallpaper/balloon.jpg" added="2019-11-02T08:05:42Z" modified="2019-11-02T08:05:42Z" visited="2019-11-02T08:05:43Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/jpeg"/>
+        <bookmark:applications>
+          <bookmark:application name="pipanel" exec="&apos;pipanel %u&apos;" modified="2019-11-02T08:05:42Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///usr/share/rpd-wallpaper/bridge.jpg" added="2019-11-02T08:05:48Z" modified="2019-11-02T08:05:48Z" visited="2019-11-02T08:05:48Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/jpeg"/>
+        <bookmark:applications>
+          <bookmark:application name="pipanel" exec="&apos;pipanel %u&apos;" modified="2019-11-02T08:05:48Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+</xbel>

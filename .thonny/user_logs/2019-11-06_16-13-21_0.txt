@@ -1,0 +1,566 @@
+[
+    {
+        "editor_id": 1970904208,
+        "time": "2019-11-06T16:13:22.048641",
+        "sequence": "EditorTextCreated",
+        "text_widget_id": 1970989008,
+        "text_widget_class": "CodeViewText",
+        "editor_class": "Editor"
+    },
+    {
+        "editor_id": 1970904208,
+        "filename": "/home/pi/Moisture-Sensor/moisture.py",
+        "sequence": "Open",
+        "time": "2019-11-06T16:13:22.049667",
+        "text_widget_id": 1970989008,
+        "text_widget_class": "CodeViewText",
+        "editor_class": "Editor"
+    },
+    {
+        "time": "2019-11-06T16:13:22.117374",
+        "index1": "1.0",
+        "sequence": "TextDelete",
+        "text_widget_id": 1970989008,
+        "text_widget_class": "CodeViewText",
+        "index2": "2.0"
+    },
+    {
+        "tags": "()",
+        "time": "2019-11-06T16:13:22.135614",
+        "text": "#!/usr/bin/python\n\n# Start by importing the libraries we want to use\n\nimport RPi.GPIO as GPIO # This is the GPIO library we need to use the GPIO pins on the Raspberry Pi\nimport smtplib # This is the SMTP library we need to send the email notification\nimport time # This is the time library, we need this so we can use the sleep function\n\n# Define some variables to be used later on in our script\n\n# You might not need the username and password variable, depends if you are using a provider or if you have your raspberry pi setup to send emails\n# If you have setup your raspberry pi to send emails, then you will probably want to use 'localhost' for your smtp_host\n\nsmtp_username = \"enter_username_here\" # This is the username used to login to your SMTP provider\nsmtp_password = \"enter_password_here\" # This is the password used to login to your SMTP provider\nsmtp_host = \"enter_host_here\" # This is the host of the SMTP provider\nsmtp_port = 25 # This is the port that your SMTP provider uses\n\nsmtp_sender = \"sender@email.com\" # This is the FROM email address\nsmtp_receivers = ['receiver@email.com'] # This is the TO email address\n\n# The next two variables use triple quotes, these allow us to preserve the line breaks in the string. \n\n# This is the message that will be sent when NO moisture is detected\n\nmessage_dead = \"\"\"From: Sender Name <sender@email.com>\nTo: Receiver Name <receiver@email.com>\nSubject: Moisture Sensor Notification\n\nWarning, no moisture detected! Plant death imminent!!! :'(\n\"\"\"\n\n# This is the message that will be sent when moisture IS detected again\n\nmessage_alive = \"\"\"From: Sender Name <sender@email.com>\nTo: Receiver Name <receiver@email.com>\nSubject: Moisture Sensor Notification\n\nPanic over! Plant has water again :)\n\"\"\"\n\n# This is our sendEmail function\n\ndef sendEmail(smtp_message):\n\ttry:\n\t\tsmtpObj = smtplib.SMTP(smtp_host, smtp_port)\n\t\tsmtpObj.login(smtp_username, smtp_password) # If you don't need to login to your smtp provider, simply remove this line\n\t\tsmtpObj.sendmail(smtp_sender, smtp_receivers, smtp_message)         \n\t\tprint \"Successfully sent email\"\n\texcept smtplib.SMTPException:\n\t\tprint \"Error: unable to send email\"\n\n# This is our callback function, this function will be called every time there is a change on the specified GPIO channel, in this example we are using 17\n\ndef callback(channel):  \n\tif GPIO.input(channel):\n\t\tprint \"LED off\"\n\t\tsendEmail(message_dead)\n\telse:\n\t\tprint \"LED on\"\n\t\tsendEmail(message_alive)\n\n# Set our GPIO numbering to BCM\nGPIO.setmode(GPIO.BCM)\n\n# Define the GPIO pin that we have our digital output from our sensor connected to\nchannel = 17\n# Set the GPIO pin to an input\nGPIO.setup(channel, GPIO.IN)\n\n# This line tells our script to keep an eye on our gpio pin and let us know when the pin goes HIGH or LOW\nGPIO.add_event_detect(channel, GPIO.BOTH, bouncetime=300)\n# This line asigns a function to the GPIO pin so that when the above line tells us there is a change on the pin, run this function\nGPIO.add_event_callback(channel, callback)\n\n# This is an infinte loop to keep our script running\nwhile True:\n\t# This line simply tells our script to wait 0.1 of a second, this is so the script doesnt hog all of the CPU\n\ttime.sleep(0.1)\n",
+        "index": "1.0",
+        "sequence": "TextInsert",
+        "text_widget_id": 1970989008,
+        "text_widget_class": "CodeViewText"
+    },
+    {
+        "sequence": "ShowView",
+        "time": "2019-11-06T16:13:22.149726",
+        "view_id": "ShellView",
+        "view_class": "ShellView"
+    },
+    {
+        "sequence": "<FocusIn>",
+        "widget_id": 1983603312,
+        "widget_class": "Workbench",
+        "time": "2019-11-06T16:13:22.354485"
+    },
+    {
+        "text_widget_context": "shell",
+        "tags": "('welcome',)",
+        "time": "2019-11-06T16:13:22.364846",
+        "text": "Python 3.5.3 (/usr/bin/python3)",
+        "index": "1.0",
+        "sequence": "TextInsert",
+        "text_widget_id": 1970844752,
+        "text_widget_class": "ShellText"
+    },
+    {
+        "text_widget_context": "shell",
+        "tags": "('io',)",
+        "time": "2019-11-06T16:13:22.368058",
+        "text": "\n",
+        "index": "1.31",
+        "sequence": "TextInsert",
+        "text_widget_id": 1970844752,
+        "text_widget_class": "ShellText"
+    },
+    {
+        "text_widget_context": "shell",
+        "tags": "('toplevel', 'prompt')",
+        "time": "2019-11-06T16:13:22.369280",
+        "text": ">>> ",
+        "index": "2.0",
+        "sequence": "TextInsert",
+        "text_widget_id": 1970844752,
+        "text_widget_class": "ShellText"
+    },
+    {
+        "sequence": "<Button-1>",
+        "time": "2019-11-06T16:13:24.764075",
+        "widget": ".#1972072176"
+    },
+    {
+        "sequence": "<FocusOut>",
+        "widget_id": 1983603312,
+        "widget_class": "Workbench",
+        "time": "2019-11-06T16:13:26.301100"
+    },
+    {
+        "sequence": "<FocusIn>",
+        "widget_id": 1983603312,
+        "widget_class": "Workbench",
+        "time": "2019-11-06T16:13:28.200150"
+    },
+    {
+        "sequence": "<Button-1>",
+        "widget_id": 1971012432,
+        "widget_class": "Scrollbar",
+        "time": "2019-11-06T16:13:36.584188"
+    },
+    {
+        "sequence": "<Button-1>",
+        "widget_id": 1971012432,
+        "widget_class": "Scrollbar",
+        "time": "2019-11-06T16:13:52.339393"
+    },
+    {
+        "widget_id": 1970989008,
+        "widget_class": "CodeViewText",
+        "time": "2019-11-06T16:14:19.315362",
+        "sequence": "<Button-1>",
+        "text_widget_id": 1970989008,
+        "text_widget_class": "CodeViewText"
+    },
+    {
+        "time": "2019-11-06T16:14:20.772139",
+        "index1": "67.11",
+        "sequence": "TextDelete",
+        "text_widget_id": 1970989008,
+        "text_widget_class": "CodeViewText",
+        "index2": "None"
+    },
+    {
+        "tags": "None",
+        "time": "2019-11-06T16:14:21.779204",
+        "text": "4",
+        "index": "67.11",
+        "sequence": "TextInsert",
+        "text_widget_id": 1970989008,
+        "text_widget_class": "CodeViewText"
+    },
+    {
+        "sequence": "<Button-1>",
+        "widget_id": 1971012432,
+        "widget_class": "Scrollbar",
+        "time": "2019-11-06T16:14:25.083460"
+    },
+    {
+        "sequence": "<Button-1>",
+        "widget_id": 1970818224,
+        "widget_class": "Button",
+        "time": "2019-11-06T16:14:38.990690"
+    },
+    {
+        "editor_id": 1970904208,
+        "filename": "/home/pi/Moisture-Sensor/moisture.py",
+        "sequence": "Save",
+        "time": "2019-11-06T16:14:39.093723",
+        "text_widget_id": 1970989008,
+        "text_widget_class": "CodeViewText",
+        "editor_class": "Editor"
+    },
+    {
+        "sequence": "<Button-1>",
+        "widget_id": 1970946896,
+        "widget_class": "Button",
+        "time": "2019-11-06T16:14:40.253376"
+    },
+    {
+        "text_widget_context": "shell",
+        "time": "2019-11-06T16:14:40.328949",
+        "index1": "2.4",
+        "sequence": "TextDelete",
+        "text_widget_id": 1970844752,
+        "text_widget_class": "ShellText",
+        "index2": "3.0"
+    },
+    {
+        "text_widget_context": "shell",
+        "tags": "('automagic', 'toplevel', 'command')",
+        "time": "2019-11-06T16:14:40.331230",
+        "text": "%cd /home/pi/Moisture-Sensor\n%Debug moisture.py\n",
+        "index": "2.4",
+        "sequence": "TextInsert",
+        "text_widget_id": 1970844752,
+        "text_widget_class": "ShellText"
+    },
+    {
+        "text_widget_context": "shell",
+        "time": "2019-11-06T16:14:40.336497",
+        "index1": "4.0",
+        "sequence": "TextDelete",
+        "text_widget_id": 1970844752,
+        "text_widget_class": "ShellText",
+        "index2": "4.0"
+    },
+    {
+        "sequence": "MagicCommand",
+        "cmd_line": "%cd /home/pi/Moisture-Sensor\n",
+        "time": "2019-11-06T16:14:40.339217"
+    },
+    {
+        "sequence": "ShellCommand",
+        "command_text": "%cd /home/pi/Moisture-Sensor\n",
+        "time": "2019-11-06T16:14:40.341695"
+    },
+    {
+        "text_widget_context": "shell",
+        "tags": "('toplevel', 'prompt')",
+        "time": "2019-11-06T16:14:40.363350",
+        "text": ">>> ",
+        "index": "3.0",
+        "sequence": "TextInsert",
+        "text_widget_id": 1970844752,
+        "text_widget_class": "ShellText"
+    },
+    {
+        "text_widget_context": "shell",
+        "time": "2019-11-06T16:14:40.366893",
+        "index1": "4.0",
+        "sequence": "TextDelete",
+        "text_widget_id": 1970844752,
+        "text_widget_class": "ShellText",
+        "index2": "4.0"
+    },
+    {
+        "sequence": "MagicCommand",
+        "cmd_line": "%Debug moisture.py\n",
+        "time": "2019-11-06T16:14:40.369076"
+    },
+    {
+        "sequence": "ShellCommand",
+        "command_text": "%Debug moisture.py\n",
+        "time": "2019-11-06T16:14:40.716886"
+    },
+    {
+        "text_widget_context": "shell",
+        "tags": "('toplevel', 'error')",
+        "time": "2019-11-06T16:14:40.771154",
+        "text": "  ",
+        "index": "4.0",
+        "sequence": "TextInsert",
+        "text_widget_id": 1970844752,
+        "text_widget_class": "ShellText"
+    },
+    {
+        "text_widget_context": "shell",
+        "tags": "('toplevel', 'error', 'hyperlink')",
+        "time": "2019-11-06T16:14:40.772994",
+        "text": "File \"/home/pi/Moisture-Sensor/moisture.py\", line 49",
+        "index": "4.2",
+        "sequence": "TextInsert",
+        "text_widget_id": 1970844752,
+        "text_widget_class": "ShellText"
+    },
+    {
+        "text_widget_context": "shell",
+        "tags": "('toplevel', 'error')",
+        "time": "2019-11-06T16:14:40.774094",
+        "text": "\n",
+        "index": "4.54",
+        "sequence": "TextInsert",
+        "text_widget_id": 1970844752,
+        "text_widget_class": "ShellText"
+    },
+    {
+        "text_widget_context": "shell",
+        "tags": "('toplevel', 'error')",
+        "time": "2019-11-06T16:14:40.775087",
+        "text": "    print \"Successfully sent email\"\n",
+        "index": "5.0",
+        "sequence": "TextInsert",
+        "text_widget_id": 1970844752,
+        "text_widget_class": "ShellText"
+    },
+    {
+        "text_widget_context": "shell",
+        "tags": "('toplevel', 'error')",
+        "time": "2019-11-06T16:14:40.776053",
+        "text": "                                  ^\n",
+        "index": "6.0",
+        "sequence": "TextInsert",
+        "text_widget_id": 1970844752,
+        "text_widget_class": "ShellText"
+    },
+    {
+        "text_widget_context": "shell",
+        "tags": "('toplevel', 'error')",
+        "time": "2019-11-06T16:14:40.777005",
+        "text": "SyntaxError: Missing parentheses in call to 'print'\n",
+        "index": "7.0",
+        "sequence": "TextInsert",
+        "text_widget_id": 1970844752,
+        "text_widget_class": "ShellText"
+    },
+    {
+        "text_widget_context": "shell",
+        "tags": "('toplevel', 'error')",
+        "time": "2019-11-06T16:14:40.777980",
+        "text": "\n",
+        "index": "8.0",
+        "sequence": "TextInsert",
+        "text_widget_id": 1970844752,
+        "text_widget_class": "ShellText"
+    },
+    {
+        "text_widget_context": "shell",
+        "tags": "('toplevel', 'prompt')",
+        "time": "2019-11-06T16:14:40.779482",
+        "text": ">>> ",
+        "index": "9.0",
+        "sequence": "TextInsert",
+        "text_widget_id": 1970844752,
+        "text_widget_class": "ShellText"
+    },
+    {
+        "sequence": "<Button-1>",
+        "widget_id": 1970946896,
+        "widget_class": "Button",
+        "time": "2019-11-06T16:14:41.644913"
+    },
+    {
+        "text_widget_context": "shell",
+        "time": "2019-11-06T16:14:41.768627",
+        "index1": "9.4",
+        "sequence": "TextDelete",
+        "text_widget_id": 1970844752,
+        "text_widget_class": "ShellText",
+        "index2": "10.0"
+    },
+    {
+        "text_widget_context": "shell",
+        "tags": "('automagic', 'toplevel', 'command')",
+        "time": "2019-11-06T16:14:41.770835",
+        "text": "%Debug moisture.py\n",
+        "index": "9.4",
+        "sequence": "TextInsert",
+        "text_widget_id": 1970844752,
+        "text_widget_class": "ShellText"
+    },
+    {
+        "text_widget_context": "shell",
+        "time": "2019-11-06T16:14:41.776479",
+        "index1": "10.0",
+        "sequence": "TextDelete",
+        "text_widget_id": 1970844752,
+        "text_widget_class": "ShellText",
+        "index2": "10.0"
+    },
+    {
+        "sequence": "MagicCommand",
+        "cmd_line": "%Debug moisture.py\n",
+        "time": "2019-11-06T16:14:41.778875"
+    },
+    {
+        "sequence": "ShellCommand",
+        "command_text": "%Debug moisture.py\n",
+        "time": "2019-11-06T16:14:42.143764"
+    },
+    {
+        "text_widget_context": "shell",
+        "tags": "('toplevel', 'error')",
+        "time": "2019-11-06T16:14:42.196952",
+        "text": "  ",
+        "index": "10.0",
+        "sequence": "TextInsert",
+        "text_widget_id": 1970844752,
+        "text_widget_class": "ShellText"
+    },
+    {
+        "text_widget_context": "shell",
+        "tags": "('toplevel', 'error', 'hyperlink')",
+        "time": "2019-11-06T16:14:42.198185",
+        "text": "File \"/home/pi/Moisture-Sensor/moisture.py\", line 49",
+        "index": "10.2",
+        "sequence": "TextInsert",
+        "text_widget_id": 1970844752,
+        "text_widget_class": "ShellText"
+    },
+    {
+        "text_widget_context": "shell",
+        "tags": "('toplevel', 'error')",
+        "time": "2019-11-06T16:14:42.199189",
+        "text": "\n",
+        "index": "10.54",
+        "sequence": "TextInsert",
+        "text_widget_id": 1970844752,
+        "text_widget_class": "ShellText"
+    },
+    {
+        "text_widget_context": "shell",
+        "tags": "('toplevel', 'error')",
+        "time": "2019-11-06T16:14:42.200197",
+        "text": "    print \"Successfully sent email\"\n",
+        "index": "11.0",
+        "sequence": "TextInsert",
+        "text_widget_id": 1970844752,
+        "text_widget_class": "ShellText"
+    },
+    {
+        "text_widget_context": "shell",
+        "tags": "('toplevel', 'error')",
+        "time": "2019-11-06T16:14:42.201153",
+        "text": "                                  ^\n",
+        "index": "12.0",
+        "sequence": "TextInsert",
+        "text_widget_id": 1970844752,
+        "text_widget_class": "ShellText"
+    },
+    {
+        "text_widget_context": "shell",
+        "tags": "('toplevel', 'error')",
+        "time": "2019-11-06T16:14:42.202101",
+        "text": "SyntaxError: Missing parentheses in call to 'print'\n",
+        "index": "13.0",
+        "sequence": "TextInsert",
+        "text_widget_id": 1970844752,
+        "text_widget_class": "ShellText"
+    },
+    {
+        "text_widget_context": "shell",
+        "tags": "('toplevel', 'error')",
+        "time": "2019-11-06T16:14:42.203232",
+        "text": "\n",
+        "index": "14.0",
+        "sequence": "TextInsert",
+        "text_widget_id": 1970844752,
+        "text_widget_class": "ShellText"
+    },
+    {
+        "text_widget_context": "shell",
+        "tags": "('toplevel', 'prompt')",
+        "time": "2019-11-06T16:14:42.204678",
+        "text": ">>> ",
+        "index": "15.0",
+        "sequence": "TextInsert",
+        "text_widget_id": 1970844752,
+        "text_widget_class": "ShellText"
+    },
+    {
+        "sequence": "<Button-1>",
+        "widget_id": 1970946896,
+        "widget_class": "Button",
+        "time": "2019-11-06T16:14:42.780653"
+    },
+    {
+        "text_widget_context": "shell",
+        "time": "2019-11-06T16:14:42.872270",
+        "index1": "15.4",
+        "sequence": "TextDelete",
+        "text_widget_id": 1970844752,
+        "text_widget_class": "ShellText",
+        "index2": "16.0"
+    },
+    {
+        "text_widget_context": "shell",
+        "tags": "('automagic', 'toplevel', 'command')",
+        "time": "2019-11-06T16:14:42.874673",
+        "text": "%Debug moisture.py\n",
+        "index": "15.4",
+        "sequence": "TextInsert",
+        "text_widget_id": 1970844752,
+        "text_widget_class": "ShellText"
+    },
+    {
+        "text_widget_context": "shell",
+        "time": "2019-11-06T16:14:42.879751",
+        "index1": "16.0",
+        "sequence": "TextDelete",
+        "text_widget_id": 1970844752,
+        "text_widget_class": "ShellText",
+        "index2": "16.0"
+    },
+    {
+        "sequence": "MagicCommand",
+        "cmd_line": "%Debug moisture.py\n",
+        "time": "2019-11-06T16:14:42.882049"
+    },
+    {
+        "sequence": "ShellCommand",
+        "command_text": "%Debug moisture.py\n",
+        "time": "2019-11-06T16:14:43.254244"
+    },
+    {
+        "text_widget_context": "shell",
+        "tags": "('toplevel', 'error')",
+        "time": "2019-11-06T16:14:43.307872",
+        "text": "  ",
+        "index": "16.0",
+        "sequence": "TextInsert",
+        "text_widget_id": 1970844752,
+        "text_widget_class": "ShellText"
+    },
+    {
+        "text_widget_context": "shell",
+        "tags": "('toplevel', 'error', 'hyperlink')",
+        "time": "2019-11-06T16:14:43.309062",
+        "text": "File \"/home/pi/Moisture-Sensor/moisture.py\", line 49",
+        "index": "16.2",
+        "sequence": "TextInsert",
+        "text_widget_id": 1970844752,
+        "text_widget_class": "ShellText"
+    },
+    {
+        "text_widget_context": "shell",
+        "tags": "('toplevel', 'error')",
+        "time": "2019-11-06T16:14:43.310047",
+        "text": "\n",
+        "index": "16.54",
+        "sequence": "TextInsert",
+        "text_widget_id": 1970844752,
+        "text_widget_class": "ShellText"
+    },
+    {
+        "text_widget_context": "shell",
+        "tags": "('toplevel', 'error')",
+        "time": "2019-11-06T16:14:43.311039",
+        "text": "    print \"Successfully sent email\"\n",
+        "index": "17.0",
+        "sequence": "TextInsert",
+        "text_widget_id": 1970844752,
+        "text_widget_class": "ShellText"
+    },
+    {
+        "text_widget_context": "shell",
+        "tags": "('toplevel', 'error')",
+        "time": "2019-11-06T16:14:43.311993",
+        "text": "                                  ^\n",
+        "index": "18.0",
+        "sequence": "TextInsert",
+        "text_widget_id": 1970844752,
+        "text_widget_class": "ShellText"
+    },
+    {
+        "text_widget_context": "shell",
+        "tags": "('toplevel', 'error')",
+        "time": "2019-11-06T16:14:43.313136",
+        "text": "SyntaxError: Missing parentheses in call to 'print'\n",
+        "index": "19.0",
+        "sequence": "TextInsert",
+        "text_widget_id": 1970844752,
+        "text_widget_class": "ShellText"
+    },
+    {
+        "text_widget_context": "shell",
+        "tags": "('toplevel', 'error')",
+        "time": "2019-11-06T16:14:43.314209",
+        "text": "\n",
+        "index": "20.0",
+        "sequence": "TextInsert",
+        "text_widget_id": 1970844752,
+        "text_widget_class": "ShellText"
+    },
+    {
+        "text_widget_context": "shell",
+        "tags": "('toplevel', 'prompt')",
+        "time": "2019-11-06T16:14:43.315708",
+        "text": ">>> ",
+        "index": "21.0",
+        "sequence": "TextInsert",
+        "text_widget_id": 1970844752,
+        "text_widget_class": "ShellText"
+    },
+    {
+        "sequence": "<FocusOut>",
+        "widget_id": 1983603312,
+        "widget_class": "Workbench",
+        "time": "2019-11-06T16:14:55.324080"
+    },
+    {
+        "sequence": "<FocusIn>",
+        "widget_id": 1983603312,
+        "widget_class": "Workbench",
+        "time": "2019-11-06T16:14:55.649058"
+    }
+]

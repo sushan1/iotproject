@@ -1,0 +1,90 @@
+[
+    {
+        "text_widget_class": "CodeViewText",
+        "sequence": "EditorTextCreated",
+        "text_widget_id": 1970280656,
+        "editor_id": 1970196016,
+        "time": "2019-11-06T16:06:48.628054",
+        "editor_class": "Editor"
+    },
+    {
+        "text_widget_class": "CodeViewText",
+        "sequence": "Open",
+        "text_widget_id": 1970280656,
+        "editor_id": 1970196016,
+        "time": "2019-11-06T16:06:48.628986",
+        "editor_class": "Editor",
+        "filename": "/home/pi/soil.py"
+    },
+    {
+        "index1": "1.0",
+        "text_widget_class": "CodeViewText",
+        "text_widget_id": 1970280656,
+        "sequence": "TextDelete",
+        "time": "2019-11-06T16:06:48.695671",
+        "index2": "2.0"
+    },
+    {
+        "text_widget_class": "CodeViewText",
+        "sequence": "TextInsert",
+        "text_widget_id": 1970280656,
+        "text": "#!/usr/bin/python\nimport RPi.GPIO as GPIO\nimport time\n \n#GPIO SETUP\nchannel = 14\nGPIO.setmode(GPIO.BCM)\nGPIO.setup(channel, GPIO.IN)\n \ndef callback(channel):\n        if GPIO.input(channel):\n                print \"Water Detected!\"\n        else:\n                print \"Water Detected!\"\n \nGPIO.add_event_detect(channel, GPIO.BOTH, bouncetime=300)  # let us know when the pin goes HIGH or LOW\nGPIO.add_event_callback(channel, callback)  # assign function to GPIO PIN, Run function on change\n \n# infinite loop\nwhile True:\n        time.sleep(1)",
+        "time": "2019-11-06T16:06:48.711396",
+        "index": "1.0",
+        "tags": "()"
+    },
+    {
+        "sequence": "ShowView",
+        "time": "2019-11-06T16:06:48.724152",
+        "view_class": "ShellView",
+        "view_id": "ShellView"
+    },
+    {
+        "sequence": "<FocusIn>",
+        "widget_id": 1982894640,
+        "time": "2019-11-06T16:06:48.878645",
+        "widget_class": "Workbench"
+    },
+    {
+        "text_widget_class": "ShellText",
+        "sequence": "TextInsert",
+        "text_widget_context": "shell",
+        "text_widget_id": 1970136016,
+        "text": "Python 3.5.3 (/usr/bin/python3)",
+        "time": "2019-11-06T16:06:48.891860",
+        "index": "1.0",
+        "tags": "('welcome',)"
+    },
+    {
+        "text_widget_class": "ShellText",
+        "sequence": "TextInsert",
+        "text_widget_context": "shell",
+        "text_widget_id": 1970136016,
+        "text": "\n",
+        "time": "2019-11-06T16:06:48.895389",
+        "index": "1.31",
+        "tags": "('io',)"
+    },
+    {
+        "text_widget_class": "ShellText",
+        "sequence": "TextInsert",
+        "text_widget_context": "shell",
+        "text_widget_id": 1970136016,
+        "text": ">>> ",
+        "time": "2019-11-06T16:06:48.897074",
+        "index": "2.0",
+        "tags": "('toplevel', 'prompt')"
+    },
+    {
+        "sequence": "<FocusOut>",
+        "widget_id": 1982894640,
+        "time": "2019-11-06T16:06:50.750874",
+        "widget_class": "Workbench"
+    },
+    {
+        "sequence": "<FocusIn>",
+        "widget_id": 1982894640,
+        "time": "2019-11-06T16:06:55.529121",
+        "widget_class": "Workbench"
+    }
+]

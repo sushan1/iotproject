@@ -1,0 +1,405 @@
+** Message: environement.vala:58: Exporting primary_variable
+** Message: environement.vala:59: desktop_environnement XDG_CURRENT_DESKTOP
+** Message: environement.vala:150: confir_dirs is null, export : /etc/xdg
+** Message: environement.vala:184: Exporting XDG_CONFIG_DIRS
+** Message: environement.vala:218: custom_data :
+** Message: environement.vala:219: data_dirs :/usr/local/share:/usr/share/raspi-ui-overrides:/usr/share:/usr/share/gdm:/var/lib/menu-xdg
+** Message: environement.vala:220: data_dirs not null, export : /usr/local/share:/usr/share/raspi-ui-overrides:/usr/share:/usr/share/gdm:/var/lib/menu-xdg
+** Message: environement.vala:225: Exporting XDG_DATA_DIRS
+** Message: utils.vala:127: User config used : /home/pi/.config/lxsession/LXDE-pi/desktop.conf
+** Message: utils.vala:148: Final file used : /home/pi/.config/lxsession/LXDE-pi/desktop.conf
+** Message: utils.vala:39: Config system location : /etc/xdg/lxsession/LXDE-pi
+** Message: utils.vala:45: System system path location : /etc/xdg/lxsession/LXDE-pi/desktop.conf
+** Message: settings.vala:540: Key file does not have key 'iGtk/ColorScheme' in group 'GTK'
+** Message: settings.vala:540: Key file does not have key 'windows_manager/command' in group 'Session'
+** Message: settings.vala:540: Key file does not have key 'panel/command' in group 'Session'
+** Message: settings.vala:540: Key file does not have key 'dock/command' in group 'Session'
+** Message: settings.vala:540: Key file does not have key 'file_manager/command' in group 'Session'
+** Message: settings.vala:540: Key file does not have key 'desktop_manager/command' in group 'Session'
+** Message: settings.vala:540: Key file does not have key 'launcher_manager/autostart' in group 'Session'
+** Message: settings.vala:540: Key file does not have key 'composite_manager/command' in group 'Session'
+** Message: settings.vala:540: Key file does not have key 'im1/command' in group 'Session'
+** Message: settings.vala:540: Key file does not have key 'im2/command' in group 'Session'
+** Message: settings.vala:540: Key file does not have key 'widget1/command' in group 'Session'
+** Message: settings.vala:540: Key file does not have key 'notification/command' in group 'Session'
+** Message: settings.vala:540: Key file does not have key 'keybindings/command' in group 'Session'
+** Message: settings.vala:540: Key file does not have key 'im_manager/command' in group 'Session'
+** Message: settings.vala:540: Key file does not have key 'screensaver/command' in group 'Session'
+** Message: settings.vala:540: Key file does not have key 'power_manager/command' in group 'Session'
+** Message: settings.vala:540: Key file does not have key 'audio_manager/command' in group 'Session'
+** Message: settings.vala:540: Key file does not have key 'workspace_manager/command' in group 'Session'
+** Message: settings.vala:540: Key file does not have key 'screenshot_manager/command' in group 'Session'
+** Message: settings.vala:540: Key file does not have key 'message_manager/command' in group 'Session'
+** Message: settings.vala:540: Key file does not have key 'upgrade_manager/command' in group 'Session'
+** Message: settings.vala:540: Key file does not have key 'updates_manager/command' in group 'Session'
+** Message: settings.vala:540: Key file does not have key 'updates_manager/timeout' in group 'Session'
+** Message: settings.vala:540: Key file does not have key 'crash_manager/command' in group 'Session'
+** Message: settings.vala:540: Key file does not have key 'crash_manager/dev_mode' in group 'Session'
+** Message: settings.vala:540: Key file does not have key 'crash_manager/timeout' in group 'Session'
+** Message: settings.vala:540: Key file does not have key 'upstart_user_session' in group 'Session'
+** Message: settings.vala:540: Key file does not have key 'proxy_manager/http' in group 'Session'
+** Message: settings.vala:540: Key file does not have key 'a11y/command' in group 'Session'
+** Message: settings.vala:540: Key file does not have key 'xrandr/command' in group 'Session'
+** Message: settings.vala:540: Key file does not have key 'network_gui/command' in group 'Session'
+** Message: settings.vala:540: Key file does not have key 'webbrowser/command' in group 'Session'
+** Message: settings.vala:540: Key file does not have key 'email/command' in group 'Session'
+** Message: settings.vala:540: Key file does not have key 'pdf_reader/command' in group 'Session'
+** Message: settings.vala:540: Key file does not have key 'video_player/command' in group 'Session'
+** Message: settings.vala:540: Key file does not have key 'audio_player/command' in group 'Session'
+** Message: settings.vala:540: Key file does not have key 'images_display/command' in group 'Session'
+** Message: settings.vala:540: Key file does not have key 'text_editor/command' in group 'Session'
+** Message: settings.vala:540: Key file does not have key 'archive/command' in group 'Session'
+** Message: settings.vala:540: Key file does not have key 'charmap/command' in group 'Session'
+** Message: settings.vala:540: Key file does not have key 'calculator/command' in group 'Session'
+** Message: settings.vala:540: Key file does not have key 'spreadsheet/command' in group 'Session'
+** Message: settings.vala:540: Key file does not have key 'bittorent/command' in group 'Session'
+** Message: settings.vala:540: Key file does not have key 'document/command' in group 'Session'
+** Message: settings.vala:540: Key file does not have key 'webcam/command' in group 'Session'
+** Message: settings.vala:540: Key file does not have key 'burn/command' in group 'Session'
+** Message: settings.vala:540: Key file does not have key 'notes/command' in group 'Session'
+** Message: settings.vala:540: Key file does not have key 'disk_utility/command' in group 'Session'
+** Message: settings.vala:540: Key file does not have key 'tasks/command' in group 'Session'
+** Message: settings.vala:540: Key file does not have group 'Keymap'
+** Message: settings.vala:540: Key file does not have key 'laptop_mode' in group 'State'
+** Message: settings.vala:540: Key file does not have key 'gnome' in group 'Dbus'
+** Message: settings.vala:540: Key file does not have key 'type' in group 'Environment'
+** Message: settings.vala:540: Key file does not have key 'ubuntu_menuproxy' in group 'Environment'
+** Message: settings.vala:540: Key file does not have key 'toolkit_integration' in group 'Environment'
+** Message: settings.vala:540: Key file does not have key 'gtk/overlay_scrollbar_disable' in group 'Environment'
+** Message: settings.vala:540: Key file does not have key 'qt/force_theme' in group 'Environment'
+** Message: settings.vala:540: Key file does not have key 'qt/platform' in group 'Environment'
+** Message: settings.vala:462: Monitoring: /home/pi/.config/lxsession/LXDE-pi/desktop.conf
+** Message: settings.vala:466: Desktop file is already in config home, do nothing
+** Message: environement.vala:79: Exporting variable
+** Message: environement.vala:80: desktop_environnement XDG_CURRENT_DESKTOP
+** Message: environement.vala:177: custom_config :
+** Message: environement.vala:178: config_dirs :/etc/xdg
+** Message: environement.vala:179: confir_dirs not null, export : /etc/xdg
+** Message: environement.vala:184: Exporting XDG_CONFIG_DIRS
+** Message: environement.vala:218: custom_data :
+** Message: environement.vala:219: data_dirs :/usr/local/share:/usr/share/raspi-ui-overrides:/usr/share:/usr/share/gdm:/var/lib/menu-xdg
+** Message: environement.vala:220: data_dirs not null, export : /usr/local/share:/usr/share/raspi-ui-overrides:/usr/share:/usr/share/gdm:/var/lib/menu-xdg
+** Message: environement.vala:225: Exporting XDG_DATA_DIRS
+** Message: utils.vala:39: Config system location : /etc/xdg/lxsession/LXDE-pi
+** Message: utils.vala:45: System system path location : /etc/xdg/lxsession/LXDE-pi/desktop.conf
+** Message: environement.vala:254: No entry in [Environment_variable]. Key file does not have group 'Environment_variable'
+** Message: utils.vala:138: Config system location : /etc/xdg/lxsession/LXDE-pi
+** Message: utils.vala:144: System system path location : /etc/xdg/lxsession/LXDE-pi/conffiles.conf
+** Message: utils.vala:148: Final file used : /etc/xdg/lxsession/LXDE-pi/conffiles.conf
+** Message: options.vala:164: Activate xsettings_manager build-in
+** Message: utils.vala:39: Config system location : /etc/xdg/lxsession/LXDE-pi
+** Message: utils.vala:45: System system path location : /etc/xdg/lxsession/LXDE-pi/desktop.conf
+xprop:  no such property "_NET_NUMBER_OF_DESKTOPS"
+xprop:  no such property "_NET_DESKTOP_NAMES"
+** Message: app.vala:721: polkit separate
+** Message: app.vala:721: polkit separate
+** Message: app.vala:76: Launching lxpolkit 
+** Message: utils.vala:127: User config used : /home/pi/.config/lxsession/LXDE-pi/autostart
+** Message: utils.vala:148: Final file used : /home/pi/.config/lxsession/LXDE-pi/autostart
+** Message: autostart.vala:42: Autostart path : /home/pi/.config/lxsession/LXDE-pi/autostart
+** Message: app.vala:76: Launching lxpanel 
+** Message: app.vala:76: Launching pcmanfm 
+
+** (lxsession:685): WARNING **: app.vala:86: Failed to execute child process "xscreensaver" (No such file or directory)
+
+** (lxsession:685): WARNING **: app.vala:87: Error when launching xscreensaver
+** Message: app.vala:76: Launching point-rpi 
+** Message: options.vala:107: Create build-in Clipboard
+** Message: main.vala:442: Check keymap_mode (null)
+** Message: app.vala:76: Launching /usr/bin/ssh-agent 
+SSH_AUTH_SOCK=/tmp/ssh-ReoimQBuVURY/agent.826; export SSH_AUTH_SOCK;
+SSH_AGENT_PID=828; export SSH_AGENT_PID;
+echo Agent pid 828;
+** Message: app.vala:130: point-rpi exit with this type of exit: 0
+** Message: app.vala:139: Exit normal, don't reload
+** Message: app.vala:130: /usr/bin/ssh-agent exit with this type of exit: 0
+Openbox-Message: Unable to find a valid menu file "/usr/share/lxde/openbox/menu.xml"
+** Message: Connecting ...
+** Message: Status changed to down
+
+** (lxpanel:820): CRITICAL **: dhcpcd_open: Inappropriate ioctl for device
+Unit pt-device-manager.service could not be found.
+
+** (lxpanel:820): WARNING **: Battery 0 not found
+
+** (lxpanel:820): WARNING **: lxpanel: can't load ptbatt plugin
+** Message: bt: Name org.bluez owned on DBus
+** Message: bt: New agent manager found
+** Message: bt: New adapter found
+** Message: va: Name org.bluez owned on DBus
+** Message: Status changed to opened
+** Message: Connected to dhcpcd-6.11.5
+** Message: Status changed to connecting
+** Message: wlan0: Associated with OPPO R17 Pro
+** Message: eth0: Link is down
+** Message: wlan0: WPA status connected
+** Message: wlan0: Received scan results
+** Message: wlan0: Configured 192.168.43.229/24
+** Message: Status changed to connected
+env SUDO_ASKPASS=/usr/lib/pipanel/pwdpip.sh pipanel
+** Message: settings.vala:509: Desktop file change, reloading XSettings daemon
+** Message: options.vala:186: Reload xsettings_manager build-in
+** Message: utils.vala:39: Config system location : /etc/xdg/lxsession/LXDE-pi
+** Message: utils.vala:45: System system path location : /etc/xdg/lxsession/LXDE-pi/desktop.conf
+
+** (lxsession:685): WARNING **: utils.vala:70: No such file or directory
+** Message: settings.vala:503: Reload the xsettings option
+** Message: settings.vala:509: Desktop file change, reloading XSettings daemon
+** Message: options.vala:186: Reload xsettings_manager build-in
+** Message: utils.vala:39: Config system location : /etc/xdg/lxsession/LXDE-pi
+** Message: utils.vala:45: System system path location : /etc/xdg/lxsession/LXDE-pi/desktop.conf
+grep: /home/pi/.config/gtk-3.0/gtk.css: No such file or directory
+** Message: settings.vala:503: Reload the xsettings option
+** Message: settings.vala:509: Desktop file change, reloading XSettings daemon
+** Message: options.vala:186: Reload xsettings_manager build-in
+** Message: utils.vala:39: Config system location : /etc/xdg/lxsession/LXDE-pi
+** Message: utils.vala:45: System system path location : /etc/xdg/lxsession/LXDE-pi/desktop.conf
+** Message: settings.vala:503: Reload the xsettings option
+** Message: settings.vala:509: Desktop file change, reloading XSettings daemon
+** Message: options.vala:186: Reload xsettings_manager build-in
+** Message: utils.vala:39: Config system location : /etc/xdg/lxsession/LXDE-pi
+** Message: utils.vala:45: System system path location : /etc/xdg/lxsession/LXDE-pi/desktop.conf
+** Message: settings.vala:503: Reload the xsettings option
+Openbox-Message: Unable to find a valid menu file "/usr/share/lxde/openbox/menu.xml"
+/usr/bin/x-www-browser 
+[1519:1519:1106/154136.116918:ERROR:sandbox_linux.cc(344)] InitializeSandbox() called with multiple threads in process gpu-process.
+[1238:1548:1106/154203.606013:ERROR:object_proxy.cc(573)] Failed to call method: org.freedesktop.DBus.Properties.Get: object_path= /org/freedesktop/UPower: org.freedesktop.DBus.Error.ServiceUnknown: The name org.freedesktop.UPower was not provided by any .service files
+[1238:1548:1106/154203.606888:ERROR:object_proxy.cc(573)] Failed to call method: org.freedesktop.UPower.GetDisplayDevice: object_path= /org/freedesktop/UPower: org.freedesktop.DBus.Error.ServiceUnknown: The name org.freedesktop.UPower was not provided by any .service files
+[1238:1548:1106/154203.607731:ERROR:object_proxy.cc(573)] Failed to call method: org.freedesktop.UPower.EnumerateDevices: object_path= /org/freedesktop/UPower: org.freedesktop.DBus.Error.ServiceUnknown: The name org.freedesktop.UPower was not provided by any .service files
+mmal: mmal_vc_shm_init: could not initialize vc shared memory service
+mmal: mmal_vc_component_create: failed to initialise shm for 'vc.ril.video_decode' (7:EIO)
+mmal: mmal_component_create_core: could not create component 'vc.ril.video_decode' (7)
+[1:16:1106/154205.771844:ERROR:mmal_video_decoder.cc(2821)] ### mmal_component_create(vc.ril.video_decode) failed: err=7
+** Message: wlan0: Received scan results
+[1238:1548:1106/154247.496320:ERROR:object_proxy.cc(573)] Failed to call method: org.freedesktop.DBus.Properties.Get: object_path= /org/freedesktop/UPower: org.freedesktop.DBus.Error.ServiceUnknown: The name org.freedesktop.UPower was not provided by any .service files
+[1238:1548:1106/154247.497232:ERROR:object_proxy.cc(573)] Failed to call method: org.freedesktop.UPower.GetDisplayDevice: object_path= /org/freedesktop/UPower: org.freedesktop.DBus.Error.ServiceUnknown: The name org.freedesktop.UPower was not provided by any .service files
+[1238:1548:1106/154247.498110:ERROR:object_proxy.cc(573)] Failed to call method: org.freedesktop.UPower.EnumerateDevices: object_path= /org/freedesktop/UPower: org.freedesktop.DBus.Error.ServiceUnknown: The name org.freedesktop.UPower was not provided by any .service files
+[1238:1548:1106/154300.046934:ERROR:object_proxy.cc(573)] Failed to call method: org.freedesktop.DBus.Properties.Get: object_path= /org/freedesktop/UPower: org.freedesktop.DBus.Error.ServiceUnknown: The name org.freedesktop.UPower was not provided by any .service files
+[1238:1548:1106/154300.048008:ERROR:object_proxy.cc(573)] Failed to call method: org.freedesktop.UPower.GetDisplayDevice: object_path= /org/freedesktop/UPower: org.freedesktop.DBus.Error.ServiceUnknown: The name org.freedesktop.UPower was not provided by any .service files
+[1238:1548:1106/154300.049309:ERROR:object_proxy.cc(573)] Failed to call method: org.freedesktop.UPower.EnumerateDevices: object_path= /org/freedesktop/UPower: org.freedesktop.DBus.Error.ServiceUnknown: The name org.freedesktop.UPower was not provided by any .service files
+** Message: wlan0: Received scan results
+lxterminal
+** Message: wlan0: Received scan results
+** Message: wlan0: Received scan results
+** Message: wlan0: Received scan results
+** Message: wlan0: Received scan results
+** Message: wlan0: Received scan results
+** Message: wlan0: Received scan results
+** Message: wlan0: Received scan results
+** Message: wlan0: Received scan results
+** Message: wlan0: Received scan results
+** Message: wlan0: Received scan results
+** Message: wlan0: Received scan results
+** Message: wlan0: Received scan results
+** Message: wlan0: Received scan results
+** Message: wlan0: Received scan results
+** Message: wlan0: Received scan results
+** Message: wlan0: Received scan results
+** Message: wlan0: Received scan results
+** Message: wlan0: Received scan results
+** Message: wlan0: Received scan results
+[1238:1548:1106/160256.357986:ERROR:object_proxy.cc(573)] Failed to call method: org.freedesktop.DBus.Properties.Get: object_path= /org/freedesktop/UPower: org.freedesktop.DBus.Error.ServiceUnknown: The name org.freedesktop.UPower was not provided by any .service files
+[1238:1548:1106/160256.358879:ERROR:object_proxy.cc(573)] Failed to call method: org.freedesktop.UPower.GetDisplayDevice: object_path= /org/freedesktop/UPower: org.freedesktop.DBus.Error.ServiceUnknown: The name org.freedesktop.UPower was not provided by any .service files
+[1238:1548:1106/160256.359562:ERROR:object_proxy.cc(573)] Failed to call method: org.freedesktop.UPower.EnumerateDevices: object_path= /org/freedesktop/UPower: org.freedesktop.DBus.Error.ServiceUnknown: The name org.freedesktop.UPower was not provided by any .service files
+** Message: wlan0: Received scan results
+** Message: wlan0: Received scan results
+/usr/bin/thonny '/home/pi/soil.py' 
+INFO: Loading early plugins from ['/usr/bin', '/usr/lib/python35.zip', '/usr/lib/python3.5', '/usr/lib/python3.5/plat-arm-linux-gnueabihf', '/usr/lib/python3.5/lib-dynload', '/usr/local/lib/python3.5/dist-packages', '/usr/lib/python3/dist-packages', '/home/pi/.thonny/plugins/lib/python3.5/site-packages']
+** Message: wlan0: Received scan results
+** Message: wlan0: Received scan results
+/usr/bin/thonny '/home/pi/soil.py' 
+INFO: Loading early plugins from ['/usr/bin', '/usr/lib/python35.zip', '/usr/lib/python3.5', '/usr/lib/python3.5/plat-arm-linux-gnueabihf', '/usr/lib/python3.5/lib-dynload', '/usr/local/lib/python3.5/dist-packages', '/usr/lib/python3/dist-packages', '/home/pi/.thonny/plugins/lib/python3.5/site-packages']
+/usr/bin/thonny '/home/pi/soil.py' 
+** Message: wlan0: Received scan results
+INFO: Loading early plugins from ['/usr/bin', '/usr/lib/python35.zip', '/usr/lib/python3.5', '/usr/lib/python3.5/plat-arm-linux-gnueabihf', '/usr/lib/python3.5/lib-dynload', '/usr/local/lib/python3.5/dist-packages', '/usr/lib/python3/dist-packages', '/home/pi/.thonny/plugins/lib/python3.5/site-packages']
+** Message: wlan0: Received scan results
+** Message: wlan0: Disassociated from OPPO R17 Pro
+** Message: Status changed to disconnected
+[1238:1302:1106/160838.549536:ERROR:connection_factory_impl.cc(386)] Failed to connect to MCS endpoint with error -106
+** Message: wlan0: Received scan results
+** Message: wlan0: Received scan results
+** Message: wlan0: Received scan results
+** Message: wlan0: Received scan results
+[1238:1302:1106/160906.725617:ERROR:connection_factory_impl.cc(386)] Failed to connect to MCS endpoint with error -106
+** Message: wlan0: Received scan results
+** Message: wlan0: Received scan results
+** Message: wlan0: Received scan results
+/usr/bin/thonny '/home/pi/soil.py' 
+** Message: wlan0: Received scan results
+Delegated to an existing Thonny instance. Exiting now.
+** Message: wlan0: Received scan results
+** Message: wlan0: Received scan results
+** Message: wlan0: Received scan results
+** Message: wlan0: Received scan results
+[1238:1302:1106/160959.307904:ERROR:connection_factory_impl.cc(386)] Failed to connect to MCS endpoint with error -106
+** Message: wlan0: Received scan results
+** Message: wlan0: Received scan results
+** Message: wlan0: Received scan results
+** Message: wlan0: Received scan results
+** Message: wlan0: Received scan results
+** Message: wlan0: Received scan results
+** Message: wlan0: Received scan results
+** Message: wlan0: Received scan results
+** Message: wlan0: Received scan results
+** Message: wlan0: Received scan results
+** Message: wlan0: Received scan results
+** Message: wlan0: Received scan results
+[1238:1302:1106/161126.402448:ERROR:connection_factory_impl.cc(386)] Failed to connect to MCS endpoint with error -106
+** Message: wlan0: Received scan results
+** Message: wlan0: Received scan results
+** Message: wlan0: Received scan results
+** Message: wlan0: Received scan results
+** Message: wlan0: Received scan results
+** Message: wlan0: Received scan results
+** Message: wlan0: Received scan results
+AFTER NEW REQUEST <socket.socket fd=3, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 4957)>
+** Message: wlan0: Received scan results
+** Message: wlan0: Received scan results
+** Message: wlan0: Received scan results
+** Message: wlan0: Received scan results
+** Message: wlan0: Received scan results
+** Message: wlan0: Received scan results
+** Message: wlan0: Received scan results
+** Message: wlan0: Received scan results
+/usr/bin/thonny '/home/pi/Moisture-Sensor/moisture.py' 
+INFO: Loading early plugins from ['/usr/bin', '/usr/lib/python35.zip', '/usr/lib/python3.5', '/usr/lib/python3.5/plat-arm-linux-gnueabihf', '/usr/lib/python3.5/lib-dynload', '/usr/local/lib/python3.5/dist-packages', '/usr/lib/python3/dist-packages', '/home/pi/.thonny/plugins/lib/python3.5/site-packages']
+** Message: wlan0: Received scan results
+** Message: wlan0: Received scan results
+** Message: wlan0: Received scan results
+** Message: wlan0: Received scan results
+** Message: wlan0: Received scan results
+** Message: wlan0: Received scan results
+** Message: wlan0: Received scan results
+** Message: wlan0: Received scan results
+[1238:1302:1106/161421.267559:ERROR:connection_factory_impl.cc(386)] Failed to connect to MCS endpoint with error -106
+** Message: wlan0: Received scan results
+** Message: wlan0: Received scan results
+** Message: wlan0: Received scan results
+** Message: wlan0: Received scan results
+** Message: wlan0: Received scan results
+** Message: wlan0: Received scan results
+** Message: wlan0: Received scan results
+** Message: wlan0: Received scan results
+** Message: wlan0: Received scan results
+** Message: wlan0: Received scan results
+** Message: wlan0: Received scan results
+** Message: wlan0: Received scan results
+** Message: wlan0: Received scan results
+** Message: wlan0: Received scan results
+** Message: wlan0: Received scan results
+** Message: wlan0: Received scan results
+** Message: wlan0: Received scan results
+** Message: wlan0: Received scan results
+** Message: wlan0: Received scan results
+** Message: wlan0: Received scan results
+** Message: wlan0: Received scan results
+** Message: wlan0: Received scan results
+** Message: wlan0: Received scan results
+** Message: wlan0: Received scan results
+** Message: wlan0: Received scan results
+** Message: wlan0: Received scan results
+** Message: wlan0: Received scan results
+** Message: wlan0: Received scan results
+** Message: wlan0: Received scan results
+[1238:1548:1106/161759.403717:ERROR:object_proxy.cc(573)] Failed to call method: org.freedesktop.DBus.Properties.Get: object_path= /org/freedesktop/UPower: org.freedesktop.DBus.Error.ServiceUnknown: The name org.freedesktop.UPower was not provided by any .service files
+[1238:1548:1106/161759.411766:ERROR:object_proxy.cc(573)] Failed to call method: org.freedesktop.UPower.GetDisplayDevice: object_path= /org/freedesktop/UPower: org.freedesktop.DBus.Error.ServiceUnknown: The name org.freedesktop.UPower was not provided by any .service files
+[1238:1548:1106/161759.427535:ERROR:object_proxy.cc(573)] Failed to call method: org.freedesktop.UPower.EnumerateDevices: object_path= /org/freedesktop/UPower: org.freedesktop.DBus.Error.ServiceUnknown: The name org.freedesktop.UPower was not provided by any .service files
+** Message: wlan0: Received scan results
+** Message: wlan0: Received scan results
+** Message: wlan0: Received scan results
+** Message: wlan0: Associated with OPPO R17 Pro
+** Message: Status changed to connecting
+** Message: wlan0: Disassociated from OPPO R17 Pro
+** Message: Status changed to disconnected
+** Message: wlan0: Associated with OPPO R17 Pro
+** Message: Status changed to connecting
+[1238:1302:1106/161822.673091:ERROR:connection_factory_impl.cc(386)] Failed to connect to MCS endpoint with error -137
+** Message: wlan0: Configured 192.168.43.229/24
+** Message: Status changed to connected
+[1238:1548:1106/161837.374163:ERROR:object_proxy.cc(573)] Failed to call method: org.freedesktop.DBus.Properties.Get: object_path= /org/freedesktop/UPower: org.freedesktop.DBus.Error.ServiceUnknown: The name org.freedesktop.UPower was not provided by any .service files
+[1238:1548:1106/161837.375093:ERROR:object_proxy.cc(573)] Failed to call method: org.freedesktop.UPower.GetDisplayDevice: object_path= /org/freedesktop/UPower: org.freedesktop.DBus.Error.ServiceUnknown: The name org.freedesktop.UPower was not provided by any .service files
+[1238:1548:1106/161837.376092:ERROR:object_proxy.cc(573)] Failed to call method: org.freedesktop.UPower.EnumerateDevices: object_path= /org/freedesktop/UPower: org.freedesktop.DBus.Error.ServiceUnknown: The name org.freedesktop.UPower was not provided by any .service files
+[1238:1548:1106/161905.511733:ERROR:object_proxy.cc(573)] Failed to call method: org.freedesktop.DBus.Properties.Get: object_path= /org/freedesktop/UPower: org.freedesktop.DBus.Error.ServiceUnknown: The name org.freedesktop.UPower was not provided by any .service files
+[1238:1548:1106/161905.512865:ERROR:object_proxy.cc(573)] Failed to call method: org.freedesktop.UPower.GetDisplayDevice: object_path= /org/freedesktop/UPower: org.freedesktop.DBus.Error.ServiceUnknown: The name org.freedesktop.UPower was not provided by any .service files
+[1238:1548:1106/161905.513750:ERROR:object_proxy.cc(573)] Failed to call method: org.freedesktop.UPower.EnumerateDevices: object_path= /org/freedesktop/UPower: org.freedesktop.DBus.Error.ServiceUnknown: The name org.freedesktop.UPower was not provided by any .service files
+** Message: wlan0: Received scan results
+** Message: wlan0: Received scan results
+** Message: wlan0: Received scan results
+** Message: wlan0: Received scan results
+** Message: wlan0: Received scan results
+** Message: wlan0: Received scan results
+** Message: wlan0: Received scan results
+** Message: wlan0: Received scan results
+** Message: wlan0: Received scan results
+** Message: wlan0: Received scan results
+** Message: wlan0: Received scan results
+** Message: wlan0: Received scan results
+** Message: wlan0: Received scan results
+** Message: wlan0: Received scan results
+** Message: wlan0: Received scan results
+** Message: wlan0: Received scan results
+** Message: wlan0: Received scan results
+** Message: wlan0: Received scan results
+** Message: wlan0: Received scan results
+** Message: wlan0: Received scan results
+** Message: wlan0: Received scan results
+xarchiver '/home/pi/Downloads/IoT_Plant-master.zip' 
+Xarchiver 0.5.4 (©)2005-2008 Giuseppe Torelli
+The program 'pcmanfm' received an X Window System error.
+This probably reflects a bug in the program.
+The error was 'BadWindow (invalid Window parameter)'.
+  (Details: serial 50294 error_code 3 request_code 38 minor_code 0)
+  (Note to programmers: normally, X errors are reported asynchronously;
+   that is, you will receive the error a while after causing it.
+   To debug your program, run it with the --sync command line
+   option to change this behavior. You can then get a meaningful
+   backtrace from your debugger if you break on the gdk_x_error() function.)
+** Message: app.vala:130: pcmanfm exit with this type of exit: 256
+** Message: app.vala:145: Exit normal, don't reload
+
+** (lxpanel:820): WARNING **: lxpanel : X error: BadWindow (invalid Window parameter)
+
+** (lxpanel:820): WARNING **: lxpanel : X error: BadWindow (invalid Window parameter)
+
+** (lxpanel:820): WARNING **: lxpanel : X error: BadWindow (invalid Window parameter)
+
+** (lxpanel:820): WARNING **: lxpanel : X error: BadWindow (invalid Window parameter)
+
+** (lxpanel:820): WARNING **: lxpanel : X error: BadWindow (invalid Window parameter)
+
+** (lxpanel:820): WARNING **: lxpanel : X error: BadWindow (invalid Window parameter)
+
+** (lxpanel:820): WARNING **: lxpanel : X error: BadWindow (invalid Window parameter)
+
+** (lxpanel:820): WARNING **: lxpanel : X error: BadWindow (invalid Window parameter)
+
+** (lxpanel:820): WARNING **: lxpanel : X error: BadWindow (invalid Window parameter)
+
+(lxpanel:820): Gdk-CRITICAL **: IA__gdk_window_get_screen: assertion 'GDK_IS_WINDOW (window)' failed
+
+(lxpanel:820): Gdk-CRITICAL **: IA__gdk_screen_get_monitor_at_window: assertion 'GDK_IS_SCREEN (screen)' failed
+
+(lxpanel:820): GLib-GObject-CRITICAL **: g_object_unref: assertion 'G_IS_OBJECT (object)' failed
+
+** (lxpanel:820): WARNING **: lxpanel : X error: BadWindow (invalid Window parameter)
+
+** (lxpanel:820): WARNING **: lxpanel : X error: BadWindow (invalid Window parameter)
+
+** (lxpanel:820): WARNING **: lxpanel : X error: BadWindow (invalid Window parameter)
+
+** (lxpanel:820): WARNING **: lxpanel : X error: BadWindow (invalid Window parameter)
+
+** (lxpanel:820): WARNING **: lxpanel : X error: BadWindow (invalid Window parameter)
+
+(lxpanel:820): GLib-CRITICAL **: g_string_insert_len: assertion 'len == 0 || val != NULL' failed
+pcmanfm 
+** Message: wlan0: Received scan results
+** Message: wlan0: Received scan results
+** Message: wlan0: Received scan results
+** Message: wlan0: Received scan results
+** Message: wlan0: Received scan results
+** Message: wlan0: Received scan results
+** Message: wlan0: Received scan results
+pcmanfm 
+** Message: wlan0: Received scan results
+pcmanfm 

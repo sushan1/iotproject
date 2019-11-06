@@ -1,0 +1,241 @@
+[
+    {
+        "editor_class": "Editor",
+        "text_widget_id": 1970328368,
+        "editor_id": 1970244976,
+        "text_widget_class": "CodeViewText",
+        "sequence": "EditorTextCreated",
+        "time": "2019-11-06T16:07:14.621895"
+    },
+    {
+        "editor_class": "Editor",
+        "text_widget_id": 1970328368,
+        "filename": "/home/pi/soil.py",
+        "editor_id": 1970244976,
+        "text_widget_class": "CodeViewText",
+        "sequence": "Open",
+        "time": "2019-11-06T16:07:14.623031"
+    },
+    {
+        "time": "2019-11-06T16:07:14.689810",
+        "text_widget_id": 1970328368,
+        "index1": "1.0",
+        "text_widget_class": "CodeViewText",
+        "sequence": "TextDelete",
+        "index2": "2.0"
+    },
+    {
+        "text_widget_id": 1970328368,
+        "tags": "()",
+        "index": "1.0",
+        "text_widget_class": "CodeViewText",
+        "sequence": "TextInsert",
+        "text": "#!/usr/bin/python\nimport RPi.GPIO as GPIO\nimport time\n \n#GPIO SETUP\nchannel = 14\nGPIO.setmode(GPIO.BCM)\nGPIO.setup(channel, GPIO.IN)\n \ndef callback(channel):\n        if GPIO.input(channel):\n                print \"Water Detected!\"\n        else:\n                print \"Water Detected!\"\n \nGPIO.add_event_detect(channel, GPIO.BOTH, bouncetime=300)  # let us know when the pin goes HIGH or LOW\nGPIO.add_event_callback(channel, callback)  # assign function to GPIO PIN, Run function on change\n \n# infinite loop\nwhile True:\n        time.sleep(1)",
+        "time": "2019-11-06T16:07:14.705734"
+    },
+    {
+        "time": "2019-11-06T16:07:14.718657",
+        "sequence": "ShowView",
+        "view_class": "ShellView",
+        "view_id": "ShellView"
+    },
+    {
+        "time": "2019-11-06T16:07:14.886379",
+        "sequence": "<FocusIn>",
+        "widget_id": 1982944784,
+        "widget_class": "Workbench"
+    },
+    {
+        "text_widget_id": 1970185008,
+        "tags": "('welcome',)",
+        "index": "1.0",
+        "text_widget_context": "shell",
+        "text_widget_class": "ShellText",
+        "sequence": "TextInsert",
+        "text": "Python 3.5.3 (/usr/bin/python3)",
+        "time": "2019-11-06T16:07:14.898627"
+    },
+    {
+        "text_widget_id": 1970185008,
+        "tags": "('io',)",
+        "index": "1.31",
+        "text_widget_context": "shell",
+        "text_widget_class": "ShellText",
+        "sequence": "TextInsert",
+        "text": "\n",
+        "time": "2019-11-06T16:07:14.902906"
+    },
+    {
+        "text_widget_id": 1970185008,
+        "tags": "('toplevel', 'prompt')",
+        "index": "2.0",
+        "text_widget_context": "shell",
+        "text_widget_class": "ShellText",
+        "sequence": "TextInsert",
+        "text": ">>> ",
+        "time": "2019-11-06T16:07:14.904966"
+    },
+    {
+        "time": "2019-11-06T16:07:16.057995",
+        "sequence": "<FocusOut>",
+        "widget_id": 1982944784,
+        "widget_class": "Workbench"
+    },
+    {
+        "time": "2019-11-06T16:07:18.211573",
+        "sequence": "<FocusIn>",
+        "widget_id": 1982944784,
+        "widget_class": "Workbench"
+    },
+    {
+        "time": "2019-11-06T16:07:32.787484",
+        "sequence": "<FocusOut>",
+        "widget_id": 1982944784,
+        "widget_class": "Workbench"
+    },
+    {
+        "time": "2019-11-06T16:09:27.590495",
+        "sequence": "<FocusIn>",
+        "widget_id": 1982944784,
+        "widget_class": "Workbench"
+    },
+    {
+        "time": "2019-11-06T16:09:38.441923",
+        "sequence": "<FocusOut>",
+        "widget_id": 1982944784,
+        "widget_class": "Workbench"
+    },
+    {
+        "time": "2019-11-06T16:09:38.847339",
+        "sequence": "<FocusIn>",
+        "widget_id": 1982944784,
+        "widget_class": "Workbench"
+    },
+    {
+        "time": "2019-11-06T16:09:39.465591",
+        "sequence": "<FocusOut>",
+        "widget_id": 1982944784,
+        "widget_class": "Workbench"
+    },
+    {
+        "time": "2019-11-06T16:09:40.878840",
+        "sequence": "<FocusIn>",
+        "widget_id": 1982944784,
+        "widget_class": "Workbench"
+    },
+    {
+        "time": "2019-11-06T16:09:42.456812",
+        "sequence": "<FocusOut>",
+        "widget_id": 1982944784,
+        "widget_class": "Workbench"
+    },
+    {
+        "time": "2019-11-06T16:09:42.798396",
+        "sequence": "<FocusIn>",
+        "widget_id": 1982944784,
+        "widget_class": "Workbench"
+    },
+    {
+        "time": "2019-11-06T16:09:44.150077",
+        "sequence": "<Button-1>",
+        "widget_id": 1970352912,
+        "widget_class": "Scrollbar"
+    },
+    {
+        "time": "2019-11-06T16:09:46.992092",
+        "sequence": "<Button-1>",
+        "widget_id": 1970352976,
+        "widget_class": "Scrollbar"
+    },
+    {
+        "time": "2019-11-06T16:09:51.537510",
+        "sequence": "<FocusOut>",
+        "widget_id": 1982944784,
+        "widget_class": "Workbench"
+    },
+    {
+        "time": "2019-11-06T16:09:52.971888",
+        "sequence": "<FocusIn>",
+        "widget_id": 1982944784,
+        "widget_class": "Workbench"
+    },
+    {
+        "text_widget_id": 1970328368,
+        "tags": "None",
+        "index": "21.21",
+        "text_widget_class": "CodeViewText",
+        "sequence": "TextInsert",
+        "text": "s",
+        "time": "2019-11-06T16:12:06.709753"
+    },
+    {
+        "text_widget_id": 1970328368,
+        "tags": "None",
+        "index": "21.22",
+        "text_widget_class": "CodeViewText",
+        "sequence": "TextInsert",
+        "text": "u",
+        "time": "2019-11-06T16:12:06.822319"
+    },
+    {
+        "time": "2019-11-06T16:12:08.725111",
+        "text_widget_id": 1970328368,
+        "index1": "21.22",
+        "text_widget_class": "CodeViewText",
+        "sequence": "TextDelete",
+        "index2": "None"
+    },
+    {
+        "time": "2019-11-06T16:12:08.876241",
+        "text_widget_id": 1970328368,
+        "index1": "21.21",
+        "text_widget_class": "CodeViewText",
+        "sequence": "TextDelete",
+        "index2": "None"
+    },
+    {
+        "editor_class": "Editor",
+        "text_widget_id": 1970328368,
+        "filename": "/home/pi/soil.py",
+        "editor_id": 1970244976,
+        "text_widget_class": "CodeViewText",
+        "sequence": "Save",
+        "time": "2019-11-06T16:12:11.116253"
+    },
+    {
+        "command_id": "save_file",
+        "denied": "False",
+        "sequence": "Command",
+        "time": "2019-11-06T16:12:11.121631"
+    },
+    {
+        "time": "2019-11-06T16:12:15.539108",
+        "sequence": "<Button-1>",
+        "widget_id": 1970157744,
+        "widget_class": "Button"
+    },
+    {
+        "time": "2019-11-06T16:12:15.816089",
+        "sequence": "<FocusOut>",
+        "widget_id": 1982944784,
+        "widget_class": "Workbench"
+    },
+    {
+        "time": "2019-11-06T16:12:17.761878",
+        "sequence": "<FocusIn>",
+        "widget_id": 1982944784,
+        "widget_class": "Workbench"
+    },
+    {
+        "time": "2019-11-06T16:12:18.491528",
+        "sequence": "<FocusOut>",
+        "widget_id": 1982944784,
+        "widget_class": "Workbench"
+    },
+    {
+        "time": "2019-11-06T16:12:18.824163",
+        "sequence": "<FocusIn>",
+        "widget_id": 1982944784,
+        "widget_class": "Workbench"
+    }
+]

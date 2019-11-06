@@ -1,0 +1,72 @@
+[
+    {
+        "text_widget_id": 1970614832,
+        "time": "2019-11-02T20:46:24.426403",
+        "editor_id": 1970543568,
+        "text_widget_class": "CodeViewText",
+        "sequence": "EditorTextCreated",
+        "editor_class": "Editor"
+    },
+    {
+        "text_widget_id": 1970614832,
+        "filename": "/home/pi/Downloads/IoT_Plant-master/Planty.py",
+        "editor_id": 1970543568,
+        "time": "2019-11-02T20:46:24.427702",
+        "text_widget_class": "CodeViewText",
+        "sequence": "Open",
+        "editor_class": "Editor"
+    },
+    {
+        "index1": "1.0",
+        "text_widget_id": 1970614832,
+        "index2": "2.0",
+        "time": "2019-11-02T20:46:24.428219",
+        "text_widget_class": "CodeViewText",
+        "sequence": "TextDelete"
+    },
+    {
+        "text_widget_id": 1970614832,
+        "tags": "()",
+        "index": "1.0",
+        "time": "2019-11-02T20:46:24.533313",
+        "text_widget_class": "CodeViewText",
+        "text": "import sys\nimport Adafruit_DHT\nfrom gpiozero import LED, Button\nfrom time import sleep\n\n\nimport pubnub\nfrom pubnub.pnconfiguration import PNConfiguration\nfrom pubnub.pubnub import PubNub\nfrom pubnub.callbacks import SubscribeCallback\nfrom pubnub.enums import PNOperationType, PNStatusCategory\n\n \npnconfig = PNConfiguration()\npnconfig.subscribe_key = \"sub-c-a667485c-757f-11e8-9f59-fec9626a7085\"\npnconfig.publish_key = \"pub-c-cb2e18e3-a8b0-486a-bf82-2d9e9f670b7e\"\npnconfig.ssl = False\n \npubnub = PubNub(pnconfig)\n\n#Pump is connected to GPIO4 as an LED\npump = LED(4)\n\n#DHT Sensor is connected to GPIO17\nsensor = 22\npin = 17\n\n#Soil Moisture sensor is connected to GPIO14 as a button\nsoil = Button(14)\n\nflag = 1\n\npump.on()\n\nclass MySubscribeCallback(SubscribeCallback):\n    def status(self, pubnub, status):\n        pass\n        # The status object returned is always related to subscribe but could contain\n        # information about subscribe, heartbeat, or errors\n        # use the operationType to switch on different options\n        if status.operation == PNOperationType.PNSubscribeOperation \\\n                or status.operation == PNOperationType.PNUnsubscribeOperation:\n            if status.category == PNStatusCategory.PNConnectedCategory:\n                pass\n                # This is expected for a subscribe, this means there is no error or issue whatsoever\n            elif status.category == PNStatusCategory.PNReconnectedCategory:\n                pass\n                # This usually occurs if subscribe temporarily fails but reconnects. This means\n                # there was an error but there is no longer any issue\n            elif status.category == PNStatusCategory.PNDisconnectedCategory:\n                pass\n                # This is the expected category for an unsubscribe. This means there\n                # was no error in unsubscribing from everything\n            elif status.category == PNStatusCategory.PNUnexpectedDisconnectCategory:\n                pass\n                # This is usually an issue with the internet connection, this is an error, handle\n                # appropriately retry will be called automatically\n            elif status.category == PNStatusCategory.PNAccessDeniedCategory:\n                pass\n                # This means that PAM does allow this client to subscribe to this\n                # channel and channel group configuration. This is another explicit error\n            else:\n                pass\n                # This is usually an issue with the internet connection, this is an error, handle appropriately\n                # retry will be called automatically\n        elif status.operation == PNOperationType.PNSubscribeOperation:\n            # Heartbeat operations can in fact have errors, so it is important to check first for an error.\n            # For more information on how to configure heartbeat notifications through the status\n            # PNObjectEventListener callback, consult <link to the PNCONFIGURATION heartbeart config>\n            if status.is_error():\n                pass\n                # There was an error with the heartbeat operation, handle here\n            else:\n                pass\n                # Heartbeat operation was successful\n        else:\n            pass\n            # Encountered unknown status type\n \n    def presence(self, pubnub, presence):\n        pass  # handle incoming presence data\n \n    def message(self, pubnub, message):\n        if message.message == 'ON':\n        \tglobal flag\n        \tflag = 1\n        elif message.message == 'OFF':\n\t\t\tglobal flag\n\t\t\tflag = 0\n        elif message.message == 'WATER':\n        \tpump.off()\n        \tsleep(5)\n        \tpump.on()\n \n \npubnub.add_listener(MySubscribeCallback())\npubnub.subscribe().channels('ch1').execute()\n\ndef publish_callback(result, status):\n\tpass\n\ndef get_status():\n\tif soil.is_held:\n\t\tprint(\"dry\")\n\t\treturn True\n\telse:\n\t\tprint(\"wet\")\n\t\treturn False\n\n\nwhile True:\n\tif flag ==1:\n\t\t# Try to grab a sensor reading.  Use the read_retry method which will retry up\n\t\t# to 15 times to get a sensor reading (waiting 2 seconds between each retry).\n\t\thumidity, temperature = Adafruit_DHT.read_retry(sensor, pin)\n\t\tDHT_Read = ('Temp={0:0.1f}*  Humidity={1:0.1f}%'.format(temperature, humidity))\n\t\tprint(DHT_Read)\n\n\t\tdictionary = {\"eon\": {\"Temperature\": temperature, \"Humidity\": humidity}}\n\t\tpubnub.publish().channel('ch2').message([DHT_Read]).async(publish_callback)\n\t\tpubnub.publish().channel(\"eon-chart\").message(dictionary).async(publish_callback)\n\n\t\twet = get_status()\n\t\t\n\t\tif wet == True:\n\t\t    print(\"turning on\")\n\t\t    pump.off()\n\t\t    sleep(5)\n\t\t    print(\"pump turning off\")\n\t\t    pump.on()\n\t\t    sleep(1)\n\t\telse:\n\t\t    pump.on()\n\n\t\tsleep(1)\n\telif flag == 0:\n\t\tpump.on()\n\t\tsleep(3)\n",
+        "sequence": "TextInsert"
+    },
+    {
+        "time": "2019-11-02T20:46:24.870558",
+        "widget_class": "Workbench",
+        "sequence": "<FocusIn>",
+        "widget_id": 1983219152
+    },
+    {
+        "text_widget_id": 1970453456,
+        "tags": "('welcome',)",
+        "index": "1.0",
+        "text_widget_context": "shell",
+        "text_widget_class": "ShellText",
+        "time": "2019-11-02T20:46:24.889804",
+        "text": "Python 3.5.3 (/usr/bin/python3)",
+        "sequence": "TextInsert"
+    },
+    {
+        "text_widget_id": 1970453456,
+        "tags": "('io',)",
+        "index": "1.31",
+        "text_widget_context": "shell",
+        "text_widget_class": "ShellText",
+        "time": "2019-11-02T20:46:24.892792",
+        "text": "\n",
+        "sequence": "TextInsert"
+    },
+    {
+        "text_widget_id": 1970453456,
+        "tags": "('toplevel', 'prompt')",
+        "index": "2.0",
+        "text_widget_context": "shell",
+        "text_widget_class": "ShellText",
+        "time": "2019-11-02T20:46:24.894045",
+        "text": ">>> ",
+        "sequence": "TextInsert"
+    }
+]
